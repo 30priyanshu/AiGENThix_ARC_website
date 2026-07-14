@@ -16,21 +16,33 @@ export const Route = createFileRoute("/programs/")({
 function ProgramsIndex() {
   return (
     <SiteLayout>
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">All Programs</div>
-            <h1 className="mt-3">
+      <section className="relative -mt-24 pt-[160px] pb-20 overflow-hidden bg-gradient-to-br from-[#F8FCFF] via-[#EEF7FF] to-[#DDEEFF]">
+
+        {/* Soft Background Glow */}
+        <div className="absolute -top-32 left-0 h-96 w-96 rounded-full bg-sky-300/20 blur-3xl"></div>
+        <div className="absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
+
+        {/* Subtle Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-blue-50/40"></div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">All Programs</div>
+            <h1 className="mt-3 text-navy">
               AI-driven learning &<br />
               <span className="text-navy/60">corporate training.</span>
             </h1>
-            <p className="mt-6 text-[17px] text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-[17px] text-navy/80 max-w-2xl mx-auto leading-relaxed">
               Industry-aligned programs empowering individuals, upskilling teams,
               and preparing enterprises for an AI-first future.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {PROGRAMS.map((p) => (
               <Link
                 key={p.slug}
@@ -56,7 +68,7 @@ function ProgramsIndex() {
                     </span>
                   </div>
                 </div>
-                
+
                 {/* Content Section */}
                 <div className="flex flex-col flex-1 p-8">
                   <div className="flex items-start justify-between gap-4">
@@ -67,11 +79,11 @@ function ProgramsIndex() {
                       <ArrowUpRight className="h-5 w-5" />
                     </div>
                   </div>
-                  
+
                   <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed flex-1">
                     {p.summary}
                   </p>
-                  
+
                   {/* Topics Grid */}
                   <div className="mt-6 pt-6 border-t border-hairline flex flex-wrap gap-1.5">
                     {p.topics.slice(0, 5).map((t) => (

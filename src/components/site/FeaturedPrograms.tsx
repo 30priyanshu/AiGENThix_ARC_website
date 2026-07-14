@@ -52,16 +52,7 @@ export function FeaturedPrograms() {
                 
                 {/* Content Overlay */}
                 <div className="relative p-5 flex flex-col justify-end h-full text-white">
-                  {/* Status Pills */}
-                  <div className="flex items-center gap-2 mb-auto">
-                    <span className="glass-panel bg-white/10 rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white shadow-sm border border-white/20">
-                      {p.duration}
-                    </span>
-                    <span className="glass-panel bg-white/10 rounded-full px-2.5 py-0.5 text-[10px] font-medium text-white shadow-sm border border-white/20">
-                      {p.level.split("→")[0].trim()}
-                    </span>
-                  </div>
-
+                  {/* Status Pills Removed per user request */}
                   <div className="flex items-start justify-between gap-3 mt-4">
                     <h3 className="font-display text-lg font-bold leading-tight">
                       {p.title}

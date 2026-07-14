@@ -16,22 +16,35 @@ function Corporate() {
   ];
   return (
     <SiteLayout>
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Enterprise</div>
-            <h1 className="mt-3">
+      <section className="relative -mt-24 pt-[160px] pb-20 overflow-hidden bg-gradient-to-br from-[#F8FCFF] via-[#EEF7FF] to-[#DDEEFF]">
+
+        {/* Soft Background Glow */}
+        <div className="absolute -top-32 left-0 h-96 w-96 rounded-full bg-sky-300/20 blur-3xl"></div>
+        <div className="absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
+
+        {/* Subtle Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-blue-50/40"></div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Enterprise</div>
+            <h1 className="mt-3 text-navy">
               AI transformation,
               <br />
               <span className="text-navy/60">delivered end-to-end.</span>
             </h1>
-            <p className="mt-6 text-[17px] text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-[17px] text-navy/80 max-w-2xl mx-auto leading-relaxed">
               We partner with enterprise teams from onboarding to executive AI
               literacy — designing custom programs that produce measurable AI
               adoption within a quarter.
             </p>
           </div>
-          <div className="mt-16 grid gap-5 md:grid-cols-2">
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-5 md:grid-cols-2">
             {items.map((i) => (
               <div key={i.t} className="rounded-3xl hairline bg-card p-8">
                 <div className="font-display text-2xl text-navy">{i.t}</div>

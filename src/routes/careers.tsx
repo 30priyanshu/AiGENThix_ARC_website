@@ -18,7 +18,7 @@ export const Route = createFileRoute("/careers")({
 function Careers() {
   return (
     <SiteLayout>
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-b from-indigo-50/50 to-transparent">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Careers</div>
