@@ -1,13 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import avatar1 from "@/assets/avatar-1.jpg";
-import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
-
+import avatar1 from "@/assets/Arpit sir.jpeg";
+import avatar2 from "@/assets/Srikant sir.png";
+import avatar3 from "@/assets/parth sir.png";
 const stories = [
-  { img: avatar1, name: "Priya Menon", role: "VP Engineering", before: "Backend Lead", after: "VP Engineering, Fintech", body: "AiGENThix rebuilt how our engineering org thinks about ML systems." },
-  { img: avatar2, name: "Rohan Kapoor", role: "Sr. ML Engineer", before: "Data Analyst", after: "Senior ML Engineer, Big 4", body: "The rigor was unmatched. Real production data. Real deployment." },
-  { img: avatar3, name: "Anna Whitmore", role: "CPO", before: "HR Director", after: "Chief People Officer, SaaS", body: "Measurable uplift in shipped AI features across every business unit." },
+  { img: avatar1, name: "Dr. Arpit Yadav", role: "CEO & Co-Founder", before: "Backend Lead", after: "VP Engineering, Fintech", body: "AiGENThix rebuilt how our engineering org thinks about ML systems." },
+  { img: avatar2, name: "Dr. Salur Srikant Patnaik", role: "Sr. ML Engineer", before: "Data Analyst", after: "Senior ML Engineer, Big 4", body: "The rigor was unmatched. Real production data. Real deployment." },
+  { img: avatar3, name: "Parth Saarthi", role: "CPO", before: "HR Director", after: "Chief People Officer, SaaS", body: "Measurable uplift in shipped AI features across every business unit." },
 ];
 
 export const Route = createFileRoute("/success-stories")({
@@ -30,7 +29,7 @@ function SuccessStories() {
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Success Stories</div>
-            <h1 className="mt-3 text-navy">
+            <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-navy">
               Careers, quietly
               <br />
               <span className="text-navy/60">rewritten.</span>

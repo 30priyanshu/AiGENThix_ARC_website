@@ -28,7 +28,7 @@ function Corporate() {
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Enterprise</div>
-            <h1 className="mt-3 text-navy">
+            <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-navy">
               AI transformation,
               <br />
               <span className="text-navy/60">delivered end-to-end.</span>

@@ -25,7 +25,7 @@ function About() {
               Our Story
             </div>
 
-            <h1 className="mt-3 text-slate-900">
+            <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-slate-900">
               We build the practitioners
               <br />
               <span className="text-navy/60">the AI era demands.</span>

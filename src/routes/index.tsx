@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Hero } from "@/components/site/Hero";
 import { TrustedBy } from "@/components/site/TrustedBy";
-import { FeaturedPrograms } from "@/components/site/FeaturedPrograms";
+import { PopularPrograms } from "@/components/site/PopularPrograms";
+import { LeadershipRoles } from "@/components/site/LeadershipRoles";
+import { Verticals } from "@/components/site/Verticals";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Roadmap } from "@/components/site/Roadmap";
 import { CorporateCTA } from "@/components/site/CorporateCTA";
@@ -21,7 +23,9 @@ function Index() {
     <SiteLayout>
       <Hero />
       <TrustedBy />
-      <FeaturedPrograms />
+      <PopularPrograms />
+      <LeadershipRoles />
+      <Verticals />
       <WhyUs />
       <Roadmap />
       <CorporateCTA />

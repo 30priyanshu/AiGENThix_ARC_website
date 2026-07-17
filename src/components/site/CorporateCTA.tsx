@@ -5,7 +5,7 @@ import corpImg from "@/assets/corporate-training.jpg";
 export function CorporateCTA() {
   return (
     <section className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
         <div className="rounded-[32px] overflow-hidden hairline bg-navy relative">
           <div className="grid lg:grid-cols-2">
             <div className="relative aspect-[4/3] lg:aspect-auto">

@@ -15,20 +15,19 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <section className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
-          <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-              FAQ
-            </div>
-            <h2>
-              Answers, before
-              <br />
-              <span className="text-navy/60">you ask.</span>
-            </h2>
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+        <div className="mb-14 text-center max-w-2xl mx-auto">
+          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary mb-2">
+            FAQ
           </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy">
+            Answers, before
+            <br />
+            <span className="text-navy/60">you ask.</span>
+          </h2>
+        </div>
 
-          <div className="flex flex-col gap-4">
+        <div className="max-w-3xl mx-auto flex flex-col gap-4">
             {faqs.map((f, i) => {
               const isOpen = open === i;
               return (
@@ -67,7 +66,6 @@ export function FAQ() {
               );
             })}
           </div>
-        </div>
       </div>
     </section>
   );

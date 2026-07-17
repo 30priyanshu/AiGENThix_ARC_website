@@ -12,12 +12,12 @@ const steps = [
 export function Roadmap() {
   return (
     <section className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
-          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+        <div className="mb-16 text-center max-w-2xl mx-auto">
+          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary mb-2">
             The Roadmap
           </div>
-          <h2 className="mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy">
             A structured path from
             <br />
             <span className="text-navy/60">first principles to production.</span>

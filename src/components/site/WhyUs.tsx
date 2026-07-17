@@ -37,26 +37,23 @@ const items = [
 export function WhyUs() {
   return (
     <section className="py-28 bg-muted/40 border-y border-hairline">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1.6fr]">
-          <div className="lg:sticky lg:top-32 self-start">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-              Why AiGENThix
-            </div>
-            <h2 className="mt-3">
-              A learning experience
-              <br />
-              engineered like{" "}
-              <span className="text-navy/60">software.</span>
-            </h2>
-            <p className="mt-5 max-w-md text-[15px] text-muted-foreground leading-relaxed">
-              We built AiGENThix for the way modern AI teams actually work —
-              rigorous, iterative, evidence-based.
-            </p>
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+        <div className="mb-14 text-center max-w-2xl mx-auto">
+          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary mb-2">
+            Why AiGENThix
           </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy">
+            A learning experience engineered like{" "}
+            <span className="text-navy/60">software.</span>
+          </h2>
+          <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed">
+            We built AiGENThix for the way modern AI teams actually work —
+            rigorous, iterative, evidence-based.
+          </p>
+        </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {items.map((it, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((it, i) => (
               <motion.div
                 key={it.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -76,7 +73,6 @@ export function WhyUs() {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 }

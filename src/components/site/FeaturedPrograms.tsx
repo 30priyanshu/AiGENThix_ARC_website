@@ -6,19 +6,17 @@ import { PROGRAMS } from "@/data/programs";
 export function FeaturedPrograms() {
   return (
     <section className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-          <div className="max-w-2xl">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-              Programs
-            </div>
-            <h2>
-              Six learning paths.
-              <br />
-              <span className="text-navy/60">One AI-first future.</span>
-            </h2>
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+        <div className="mb-14 text-center max-w-2xl mx-auto">
+          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary mb-2">
+            Programs
           </div>
-          <p className="max-w-md text-[15px] leading-relaxed text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy">
+            Six learning paths.
+            <br />
+            <span className="text-navy/60">One AI-first future.</span>
+          </h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
             Each program is designed with industry practitioners, benchmarked
             against enterprise expectations, and delivered with mentor-led rigor.
           </p>

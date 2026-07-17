@@ -12,17 +12,19 @@ function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <SiteLayout>
-      <section className="relative -mt-24 pt-[160px] pb-20 bg-navy overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-30" />
+      <section className="relative -mt-24 pt-[160px] pb-20 overflow-hidden bg-gradient-to-br from-[#F8FCFF] via-[#EEF7FF] to-[#DDEEFF]">
+        <div className="absolute -top-32 left-0 h-96 w-96 rounded-full bg-sky-300/20 blur-3xl"></div>
+        <div className="absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-blue-50/40"></div>
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Contact</div>
-            <h1 className="mt-3 text-white">
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Contact</div>
+            <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-navy">
               Let's talk about
               <br />
-              <span className="text-white/60">what you'll build.</span>
+              <span className="text-navy/60">what you'll build.</span>
             </h1>
-            <p className="mt-6 text-[15px] text-white/80 max-w-md mx-auto leading-relaxed">
+            <p className="mt-6 text-[17px] text-navy/70 max-w-md mx-auto leading-relaxed">
               A program advisor will get back to you within one business day.
             </p>
           </div>
