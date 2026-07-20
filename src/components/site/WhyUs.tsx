@@ -3,37 +3,37 @@ import { motion } from "framer-motion";
 const items = [
   {
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+      "https://cdn.creativefabrica.com/2022/11/25/Study-Program-icon-Graphics-48461564-1.jpg",
     title: "Practitioner-led curriculum",
     desc: "Every module authored and delivered by senior engineers shipping AI at scale.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
+      "https://www.slideteam.net/media/catalog/product/cache/1280x720/o/m/omnichannel_interactions_for_business_monotone_icon_in_powerpoint_pptx_png_and_editable_eps_format_slide01.jpg",
     title: "Enterprise capstones",
     desc: "Solve real problems with production data — not toy datasets.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+      "https://cdn.creativefabrica.com/2021/07/12/Mentoring-icon-Graphics-14604573-1.jpg",
     title: "1:1 mentorship",
     desc: "Weekly sessions with dedicated mentors from top AI organizations.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=1200&q=80",
+      "https://www.slideteam.net/media/catalog/product/cache/330x186/r/e/real_estate_cost_of_operation_monotone_icon_in_powerpoint_pptx_png_and_editable_eps_format_slide01.jpg",
     title: "Industry-recognized",
     desc: "Certificates recognized across our 140+ hiring partner network.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
+      "https://www.shutterstock.com/shutterstock/videos/3689655433/thumb/3.jpg?ip=x480",
     title: "Corporate-ready",
     desc: "Programs are calibrated to enterprise governance, compliance and MLOps standards.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+      "https://png.pngtree.com/png-clipart/20230920/original/pngtree-simple-line-icon-for-career-success-ideal-for-templates-web-design-png-image_12810089.png",
     title: "Career acceleration",
     desc: "Structured interview prep, portfolio reviews, and direct placement pipelines.",
   },
@@ -89,10 +89,6 @@ export function WhyUs() {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-cyan-600 text-xs font-bold px-3 py-1 rounded-full">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
               </div>
 
               {/* Content */}
