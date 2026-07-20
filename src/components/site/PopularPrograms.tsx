@@ -10,12 +10,10 @@ export function PopularPrograms() {
     <section className="py-20 bg-gray-50/50">
       <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
         <div className="mb-12 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 mb-4 text-sm font-semibold text-primary">
-            <Star className="h-4 w-4" />
-            Top Rated
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy">
-            Explore our most popular programs
+
+          <h2 className="mt-5 text-3xl font-bold text-slate-900 md:text-4xl">
+            Explore our most popular
+            <span className="text-cyan-600"> programs</span>
           </h2>
         </div>
 
@@ -45,16 +43,16 @@ export function PopularPrograms() {
                   </p>
                 </Link>
                 <div className="mt-auto pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
-                  <Button variant="outline" size="sm" className="w-full sm:w-1/2 text-sm font-semibold gap-2 border-primary/20 text-primary hover:bg-primary/5">
-                    <FileText className="h-4 w-4" />
-                    Syllabus
-                  </Button>
                   <Link to="/programs/$slug" params={{ slug: p.slug }} className="w-full sm:w-1/2">
-                    <Button size="sm" className="w-full text-sm font-semibold gap-2">
+                    <Button size="sm" className="w-full text-sm font-semibold gap-2 bg-cyan-500 hover:bg-cyan-400 text-white border-0">
                       Explore
                       <ArrowUpRight className="h-4 w-4" />
                     </Button>
                   </Link>
+                  <Button variant="outline" size="sm" className="w-full sm:w-1/2 text-sm font-semibold gap-2 border-cyan-500/20 text-cyan-600 hover:bg-cyan-50">
+                    <FileText className="h-4 w-4" />
+                    Syllabus
+                  </Button>
                 </div>
               </div>
             </div>
@@ -63,7 +61,10 @@ export function PopularPrograms() {
 
         <div className="mt-14 flex justify-center">
           <Link to="/programs">
-            <Button size="lg" className="rounded-full px-8 py-6 text-base font-bold shadow-lg hover:shadow-xl transition-all">
+            <Button
+              size="sm"
+              className="group rounded-full px-8 py-6 text-base font-semibold bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-200 hover:shadow-cyan-300 transition-all duration-300"
+            >
               Explore More Programs
             </Button>
           </Link>

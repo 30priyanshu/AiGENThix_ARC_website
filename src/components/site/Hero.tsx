@@ -51,7 +51,7 @@ export function Hero() {
   const slide = CARD_SLIDES[card];
 
   return (
-    <section className="relative overflow-hidden -mt-24 pt-32 pb-16 lg:pb-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 text-slate-900">
+    <section className="relative overflow-hidden -mt-24 pt-38 pb-28 lg:pb-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 text-slate-900">
       {/* grid backdrop */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.4]"
@@ -70,123 +70,179 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 md:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 items-center min-h-[560px]">
-          {/* LEFT COLUMN - Strictly left aligned */}
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-8 lg:gap-10 items-center min-h-[450px]">
+          {/* LEFT COLUMN */}
           <div className="text-left">
 
-
-            {/* Smaller H1 Font */}
-            <h1 className="mt-6 font-display font-semibold leading-[1.1] tracking-tight text-4xl md:text-5xl lg:text-6xl text-left text-slate-900">
-              <span className="text-slate-900/95">Master tomorrow's</span>
-              <br />
-              <span className="relative inline-block min-h-[1.1em]">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={word}
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -30, opacity: 0 }}
-                    transition={{ duration: 0.45, ease: [0.2, 0.7, 0.2, 1] }}
-                    className="inline-block italic text-primary"
-                  >
-                    {ROTATING_WORDS[word]}
-                  </motion.span>
-                </AnimatePresence>
+            {/* Heading */}
+            <h1 className="font-sans text-2xl md:text-3xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-slate-900">
+              Master Tomorrow's
+              <span className=" block text-cyan-500">
+                AI Career
               </span>
             </h1>
 
-            <p className="mt-5 max-w-lg text-base md:text-lg leading-relaxed text-slate-600 text-left">
-              Excel with AiGENThix — industry-aligned AI, Data & MLOps programs delivered
-              by practitioners who ship to production.
+            {/* Description */}
+            <p className="mt-5 max-w-xl text-[14px] md:text-base leading-7 text-slate-600 font-sans">
+              Gain practical AI and data skills with expert-led programs
+              designed for today's fastest-growing careers.
             </p>
+            {/* Search Section */}
+            <div className="mt-8 max-w-xl">
 
-            {/* Search-style CTA */}
-            <div className="mt-8 max-w-lg">
-              <Link
-                to="/programs"
-                className="group flex items-center gap-3 rounded-full bg-white/80 p-1.5 pl-5 shadow-sm hover:bg-white transition-all border border-blue-100 backdrop-blur-sm"
-              >
-                <Search className="h-4 w-4 text-slate-400 shrink-0" />
-                <span className="flex-1 py-2 text-[14px] text-slate-600 text-left">
-                  Tell us what you're looking to learn
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-[13px] font-medium text-primary-foreground group-hover:bg-primary/90 transition-colors shadow-sm">
+              <div className="flex items-center bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+
+                <div className="pl-5">
+                  <Search className="h-4 w-4 text-slate-400" />
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Search AI, Data Science, Machine Learning..."
+                  className="flex-1 px-4 py-3.5 text-sm text-slate-700 bg-transparent outline-none font-sans"
+                />
+
+                <Link
+                  to="/programs"
+                  className="m-2 flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-cyan-600 transition-all duration-300"
+                >
                   Explore
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </Link>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
 
-              <div className="mt-6">
-                <div className="text-[11px] uppercase tracking-[0.2em] text-slate-500 mb-2.5 text-left">
-                  Or select your goal
-                </div>
-                <div className="flex flex-wrap gap-2 justify-start">
-                  {GOAL_CHIPS.map((g) => (
-                    <Link
-                      key={g.label}
-                      to={g.to}
-                      className="rounded-full border border-blue-200 bg-white/60 hover:bg-white hover:border-primary/50 px-3.5 py-1.5 text-[12.5px] text-slate-700 transition-all shadow-sm"
+              </div>
+
+              {/* Popular Topics */}
+              <div className="mt-5">
+                <p className="text-sm font-medium text-slate-700 mb-3">
+                  Popular Learning Paths
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+
+                  {[
+                    "Generative AI",
+                    "Machine Learning",
+                    "Data Science",
+                    "MLOps",
+                    "Agentic AI",
+                    "Data Engineering",
+                  ].map((item) => (
+                    <button
+                      key={item}
+                      className="font-sans rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-medium text-slate-700 hover:border-cyan-400 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-300"
                     >
-                      {g.label}
-                    </Link>
+                      {item}
+                    </button>
                   ))}
+
                 </div>
+              </div>
+
+            </div>
+
+            {/* Stats */}
+            <div className="mt-8 flex items-center gap-3">
+
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+                <Users className="h-4 w-4 text-cyan-600" />
+              </div>
+
+              <div>
+                <p className="font-sans text-xs text-slate-500">
+                  Trusted by
+                </p>
+
+                <p className="font-sans text-sm font-semibold text-slate-900">
+                  12,000+ Learners Worldwide
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT COLUMN - Premium Image Slider */}
+          <div className="relative flex justify-center lg:justify-end w-full">
+            <div className="relative w-full max-w-[520px] rounded-[28px] overflow-hidden shadow-2xl bg-black">
+
+              <div className="relative aspect-square">
+
+                <AnimatePresence initial={false} mode="popLayout">
+                  <motion.div
+                    key={card}
+                    initial={{ x: 120 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: -120 }}
+                    transition={{
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="absolute inset-0"
+                  >
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full h-full object-cover block"
+                    />
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+
+                    {/* Content */}
+                    <div className="absolute bottom-0 left-0 right-0 p-7">
+
+                      <motion.h3
+                        key={slide.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0.2,
+                        }}
+                        className="font-sans text-2xl md:text-3xl font-bold text-white"
+                      >
+                        Master{" "}
+                        <span className="text-cyan-400">
+                          {slide.title}
+                        </span>
+                      </motion.h3>
+
+                      <motion.div
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: 0.3,
+                        }}
+                      >
+                        <Link
+                          to="/programs"
+                          className="mt-4 inline-flex items-center gap-2 text-sm text-white/90 hover:text-cyan-300 transition-colors group"
+                        >
+                          Explore programs
+
+                          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </motion.div>
+
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+
               </div>
             </div>
 
-            <div className="mt-8 flex items-center justify-start gap-2.5 text-[13px] text-slate-600">
-              <Users className="h-4 w-4 text-primary" />
-              Join the community of{" "}
-              <span className="font-display font-medium text-slate-900">12,000+</span> learners.
-            </div>
-          </div>
-
-          {/* RIGHT COLUMN - Proper image framing */}
-          <div className="relative flex justify-center lg:justify-end w-full">
-            <div className="relative w-full max-w-[600px] rounded-[2rem] overflow-hidden border border-blue-100 bg-white shadow-2xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={card}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="relative w-full"
-                >
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="w-full h-auto aspect-[4/3] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/30 to-transparent" />
-
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end">
-                    <h3 className="font-display text-2xl md:text-3xl leading-[1.1] text-white">
-                      Master{" "}
-                      <span className="italic text-primary">{slide.title}</span>
-                    </h3>
-                    <Link
-                      to="/programs"
-                      className="mt-4 inline-flex items-center gap-2 text-[13px] text-white/90 group w-fit"
-                    >
-                      <span className="underline-offset-4 group-hover:underline">
-                        Explore programs
-                      </span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* dots */}
-            <div className="absolute -bottom-8 left-0 right-0 flex justify-center lg:justify-end lg:pr-8 gap-1.5">
+            {/* Slider Dots */}
+            <div className="absolute -bottom-8 left-0 right-0 flex justify-center lg:justify-end lg:pr-8 gap-2">
               {CARD_SLIDES.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCard(idx)}
                   aria-label={`Slide ${idx + 1}`}
-                  className={`h-1.5 rounded-full transition-all ${idx === card ? "w-8 bg-primary" : "w-1.5 bg-slate-300 hover:bg-slate-400"
+                  className={`rounded-full transition-all duration-300 ${idx === card
+                    ? "w-8 h-2 bg-cyan-500"
+                    : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
                     }`}
                 />
               ))}
@@ -194,6 +250,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

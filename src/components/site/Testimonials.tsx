@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Linkedin } from "lucide-react";
 import avatar1 from "@/assets/Arpit sir.jpeg";
 import avatar2 from "@/assets/Srikant sir.png";
 import avatar3 from "@/assets/parth sir.png";
@@ -29,43 +30,77 @@ const items = [
 
 export function Testimonials() {
   return (
-    <section className="py-28 bg-muted/40 border-y border-hairline">
-      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
-        <div className="mb-12 text-center">
-          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary mb-2">
-            LEARNER TESTIMONIALS
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy">
-            Hear from our graduates first-hand
+    <section className="relative overflow-hidden py-15">
+
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-cyan-50 via-white to-cyan-100" />
+
+      {/* Glow Effects */}
+      <div className="absolute -top-40 left-0 h-[450px] w-[450px] rounded-full bg-cyan-300/20 blur-[120px]" />
+      <div className="absolute top-32 right-0 h-[400px] w-[400px] rounded-full bg-cyan-400/15 blur-[120px]" />
+      <div className="absolute bottom-0 left-1/2 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-cyan-200/20 blur-[120px]" />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+
+        {/* Header */}
+        <div className="mx-auto max-w-2xl text-center">
+
+          <h2 className="mt-5 text-3xl font-bold text-slate-900 md:text-4xl">
+            Learn from India's
+            <span className="text-cyan-600"> Top AI Experts</span>
           </h2>
+
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-7 text-slate-600">
+            Industry leaders, researchers and founders who have built real AI
+            products, trained thousands of professionals and continue shaping
+            the future of Artificial Intelligence.
+          </p>
         </div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        {/* Cards */}
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+
           {items.map((t, i) => (
             <motion.figure
               key={t.name}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="rounded-3xl bg-white shadow-soft border border-gray-100 p-8 flex flex-col items-center text-center relative mt-8"
+              transition={{
+                duration: 0.6,
+                delay: i * 0.12,
+              }}
+              className="relative mt-8 flex flex-col items-center rounded-3xl border border-cyan-100 bg-white/90 p-6 text-center shadow-[0_10px_35px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(6,182,212,0.15)]"
             >
-              <div className="absolute -top-12">
+              {/* Avatar */}
+              <div className="absolute -top-11">
                 <img
                   src={t.img}
                   alt={t.name}
-                  className="h-24 w-24 rounded-full object-cover shadow-lg border-4 border-white"
+                  className="h-20 w-20 rounded-full border-4 border-white object-cover shadow-xl"
                 />
               </div>
-              <div className="mt-12 mb-6">
-                <div className="text-lg text-navy font-bold">{t.name}</div>
-                <div className="text-sm text-muted-foreground mt-1">{t.role}</div>
+
+              <div className="mt-11">
+                <h3 className="text-lg font-bold text-slate-900">
+                  {t.name}
+                </h3>
+
+                <p className="mt-1 text-[13px] leading-5 text-slate-500">
+                  {t.role}
+                </p>
+
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="mt-3 inline-flex rounded-full bg-cyan-50 p-2 text-cyan-600 transition hover:bg-cyan-100 hover:text-cyan-700"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
               </div>
-              <div className="relative pt-6 border-t border-gray-100 w-full">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-2 text-primary/40 font-display text-4xl leading-none">
-                  "
-                </div>
-                <blockquote className="text-[15px] leading-relaxed text-navy/80 italic">
+
+              <div className="mt-5 w-full border-t border-slate-100 pt-5">
+                <blockquote className="text-[13.5px] leading-7 text-slate-600">
                   {t.quote}
                 </blockquote>
               </div>

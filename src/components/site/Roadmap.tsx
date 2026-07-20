@@ -1,56 +1,148 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { phase: "01", title: "Foundations", body: "Python, statistics, SQL, cloud primitives — establish an engineering baseline." },
-  { phase: "02", title: "Applied ML", body: "Classical ML, deep learning, evaluation frameworks and reproducible experiments." },
-  { phase: "03", title: "MLOps & Systems", body: "Docker, Kubernetes, CI/CD, model registries, monitoring, drift and retraining." },
-  { phase: "04", title: "Generative AI", body: "Transformers, RAG architectures, prompt engineering, evaluation and safety." },
-  { phase: "05", title: "Agentic Systems", body: "Planning, memory, tool-use, multi-agent orchestration for enterprise workflows." },
-  { phase: "06", title: "Capstone & Career", body: "Ship a production-grade portfolio project and interview with hiring partners." },
+  {
+    phase: "01",
+    title: "AI Foundation",
+    duration: "Weeks 1–6",
+    body: "Build strong fundamentals in Python, SQL, statistics, and AI engineering.",
+  },
+  {
+    phase: "02",
+    title: "Machine Learning",
+    duration: "Weeks 7–12",
+    body: "Learn supervised learning, deep learning, model evaluation, and deployment.",
+  },
+  {
+    phase: "03",
+    title: "MLOps & Cloud",
+    duration: "Weeks 13–18",
+    body: "Master Docker, Kubernetes, CI/CD, monitoring, and production workflows.",
+  },
+  {
+    phase: "04",
+    title: "Generative AI",
+    duration: "Weeks 19–24",
+    body: "Work with LLMs, Prompt Engineering, RAG systems, and AI applications.",
+  },
+  {
+    phase: "05",
+    title: "Agentic AI",
+    duration: "Weeks 25–28",
+    body: "Build autonomous agents, memory systems, tool calling, and multi-agent workflows.",
+  },
+  {
+    phase: "06",
+    title: "Capstone Project",
+    duration: "Weeks 29–30",
+    body: "Deploy a production-ready AI solution and build a job-ready portfolio.",
+  },
 ];
 
 export function Roadmap() {
   return (
-    <section className="py-28">
-      <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
-        <div className="mb-16 text-center max-w-2xl mx-auto">
-          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary mb-2">
-            The Roadmap
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy">
-            A structured path from
-            <br />
-            <span className="text-navy/60">first principles to production.</span>
+    <section className="relative py-24 bg-slate-50 overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 h-80 w-80 rounded-full bg-cyan-100 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-50 blur-[150px]" />
+
+      <div className="relative max-w-7xl mx-auto px-6">
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <p className="text-cyan-600 text-sm font-medium">
+            Learning Roadmap
+          </p>
+
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
+            Become an AI Engineer
           </h2>
+
+          <p className="mt-4 text-sm text-slate-600">
+            A structured learning path from fundamentals to production-ready AI.
+          </p>
         </div>
 
-        <div className="mt-16 relative">
-          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-hairline" />
-          <div className="space-y-14">
-            {steps.map((s, i) => (
-              <motion.div
-                key={s.phase}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6 }}
-                className={`relative grid md:grid-cols-2 md:gap-16 items-start ${
-                  i % 2 === 1 ? "md:[direction:rtl]" : ""
-                }`}
+        <div className="relative">
+          {/* Center Zig Zag Path */}
+          <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-[260px] h-full pointer-events-none">
+
+            <div className="hidden lg:block absolute left-1/2 top-[95px] -translate-x-1/2 h-[1140px] w-[300px] pointer-events-none">
+
+              <svg
+                className="w-full h-full"
+                viewBox="0 0 300 1140"
+                fill="none"
               >
-                <div className="pl-12 md:pl-0 md:[direction:ltr] md:text-right md:pr-8">
-                  <div className="font-display text-6xl md:text-7xl text-navy/10 leading-none">
-                    {s.phase}
+                <path
+                  d="
+      M150 20
+      C150 90,270 90,270 190
+      C270 290,30 290,30 390
+      C30 490,270 490,270 590
+      C270 690,30 690,30 790
+      C30 890,270 890,270 990
+      C270 1070,150 1070,150 1120
+      "
+                  stroke="#06B6D4"
+                  strokeWidth="3"
+                  strokeDasharray="10 10"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <circle cx="150" cy="20" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="270" cy="190" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="30" cy="390" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="270" cy="590" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="30" cy="790" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="270" cy="990" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="150" cy="1120" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+              </svg>
+
+            </div>
+
+          </div>
+
+          <div className="space-y-0">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.phase}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className={`
+        relative flex items-center
+        h-[190px]
+        ${index % 2 === 0 ? "justify-start" : "justify-end"}
+      `}
+              >
+                {/* Card */}
+                <div className="w-full lg:w-[430px] rounded-[28px] bg-white border border-cyan-100 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+
+                  <div className="flex gap-3 items-start">
+                    <span className="text-[34px] font-bold text-cyan-500 leading-none">
+                      {step.phase}
+                    </span>
+
+                    <div>
+                      <h3 className="text-[28px] font-bold text-slate-900 leading-tight">
+                        {step.title}
+                      </h3>
+
+                      <p className="text-sm font-medium text-cyan-600 mt-1">
+                        {step.duration}
+                      </p>
+                    </div>
                   </div>
-                  <div className="mt-2 font-display text-3xl text-navy">{s.title}</div>
-                </div>
-                <div className="pl-12 md:pl-8 md:[direction:ltr] mt-3 md:mt-6">
-                  <p className="text-[15px] text-muted-foreground leading-relaxed max-w-md">
-                    {s.body}
+
+                  <p className="mt-5 text-[15px] leading-8 text-slate-600">
+                    {step.body}
                   </p>
                 </div>
-
-                <span className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-3 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" />
               </motion.div>
             ))}
           </div>

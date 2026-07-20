@@ -24,15 +24,13 @@ function Index() {
       <Hero />
       <TrustedBy />
       <PopularPrograms />
+      <Testimonials />
       <LeadershipRoles />
-      <Verticals />
       <WhyUs />
       <Roadmap />
       <CorporateCTA />
-      <Testimonials />
       <FAQ />
       <ContactForm />
-      <Newsletter />
     </SiteLayout>
   );
 }

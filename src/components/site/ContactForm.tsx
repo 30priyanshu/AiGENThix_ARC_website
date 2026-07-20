@@ -11,80 +11,111 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact-section" className="py-28 bg-gradient-to-b from-transparent via-primary/5 to-transparent border-y border-hairline">
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs uppercase tracking-wider font-semibold mb-4 mx-auto">
-            <MessageSquare className="h-3 w-3" /> Connect With Us
+    <section
+      id="contact-section"
+      className="relative py-24 overflow-hidden bg-gradient-to-b from-white via-cyan-50/20 to-white"
+    >
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-cyan-200/30 blur-3xl" />
+
+      <div className="relative mx-auto max-w-5xl px-6">
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-700">
+            <MessageSquare className="h-3.5 w-3.5" />
+            Contact Us
           </div>
-          <h2 className="text-center text-4xl md:text-5xl font-bold text-navy leading-tight">
-            Ready to start your <span className="text-primary">AI journey?</span>
+
+          <h2 className="mt-5 text-4xl font-bold text-slate-900 md:text-3xl">
+            Let's Talk About Your
+            <span className="text-cyan-600">
+              AI Learning Journey
+            </span>
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto text-center">
-            Have questions about our cohorts, curriculum, or custom corporate training? Drop us a line and our team will get back to you within 24 hours.
+
+          <p className="mt-4 text-slate-500 leading-relaxed">
+            Speak with our advisors, explore enterprise training programs,
+            or find the perfect AI learning path for your goals.
           </p>
         </div>
 
-        <div className="bg-card p-8 md:p-10 rounded-[32px] shadow-elegant border border-hairline relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-          
-          <form onSubmit={handleSubmit} className="relative z-10 space-y-6 text-left">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-xs uppercase tracking-[0.14em] text-muted-foreground font-semibold">Full Name</label>
-                <input 
-                  id="name" 
-                  required 
-                  className="w-full bg-muted/30 border border-hairline rounded-xl px-4 py-3.5 text-sm text-navy placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
-                  placeholder="John Doe" 
+        {/* Form Card */}
+        <div className="relative overflow-hidden rounded-[32px] border border-cyan-100 bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-xl shadow-cyan-100/40">
+          {/* Glow */}
+          <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-cyan-100/40 blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-50/50 blur-3xl" />
+
+          <form
+            onSubmit={handleSubmit}
+            className="relative z-10 space-y-6"
+          >
+            <div className="grid md:grid-cols-2 gap-5">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Full Name
+                </label>
+
+                <input
+                  required
+                  placeholder="Enter your name"
+                  className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
                 />
               </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-xs uppercase tracking-[0.14em] text-muted-foreground font-semibold">Work Email</label>
-                <input 
-                  id="email" 
-                  type="email" 
-                  required 
-                  className="w-full bg-muted/30 border border-hairline rounded-xl px-4 py-3.5 text-sm text-navy placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
-                  placeholder="john@company.com" 
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
                 />
               </div>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="interest" className="text-xs uppercase tracking-[0.14em] text-muted-foreground font-semibold block">I'm interested in</label>
-              <select 
-                id="interest"
-                className="w-full bg-muted/30 border border-hairline rounded-xl px-4 py-3.5 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-              >
-                <option value="individual">Individual Learning Cohort</option>
-                <option value="corporate">Corporate Training / Enterprise Upskilling</option>
-                <option value="hiring">Hiring AI Talent from AiGENThix</option>
-                <option value="general">Other / General Inquiry</option>
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-700">
+                Interested In
+              </label>
+
+              <select className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100">
+                <option>Individual Learning Programs</option>
+                <option>Corporate Training</option>
+                <option>AI Workforce Upskilling</option>
+                <option>General Inquiry</option>
               </select>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-xs uppercase tracking-[0.14em] text-muted-foreground font-semibold">How can we help?</label>
-              <textarea 
-                id="message" 
-                required 
-                rows={4} 
-                className="w-full bg-muted/30 border border-hairline rounded-xl px-4 py-3.5 text-sm text-navy placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none" 
-                placeholder="Tell us what you are looking for..." 
+            <div>
+              <label className="mb-2 block text-sm font-medium text-slate-700">
+                Message
+              </label>
+
+              <textarea
+                rows={5}
+                required
+                placeholder="Tell us how we can help..."
+                className="w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
               />
             </div>
-            
-            <button 
-              type="submit" 
-              className="w-full bg-navy text-primary-foreground font-semibold py-4 rounded-xl hover:bg-navy/90 hover:shadow-elegant transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+
+            <button
+              type="submit"
+              className="group w-full rounded-2xl bg-cyan-500 py-4 font-semibold text-white transition-all duration-300 hover:bg-cyan-400 hover:shadow-xl hover:shadow-cyan-200"
             >
-              {submitted ? "Message Sent Successfully!" : (
-                <>
-                  Send Message <Send className="h-4 w-4" />
-                </>
-              )}
+              <span className="flex items-center justify-center gap-2">
+                {submitted ? (
+                  "Message Sent Successfully!"
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </>
+                )}
+              </span>
             </button>
           </form>
         </div>
