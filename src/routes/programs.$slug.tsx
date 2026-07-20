@@ -71,7 +71,7 @@ function ProgramPage() {
   return (
     <SiteLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-50 via-white to-cyan-50/50 pt-20 pb-24 border-b border-slate-200 overflow-hidden">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-[radial-gradient(circle_at_top_left,#a5f3fc_0%,#ecfeff_20%,#f8fafc_55%,#ffffff_100%)] pt-20 pb-24">
         {/* grid backdrop */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
@@ -91,57 +91,54 @@ function ProgramPage() {
             {/* Left Hero Content */}
             <div className="flex-1 max-w-3xl lg:pt-4">
               {/* Breadcrumbs */}
-              <div className="flex items-center gap-2 text-sm text-slate-500 mb-6 font-medium">
-                <Link to="/" className="hover:text-cyan-600 transition-colors">Home</Link>
+              <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
+                <Link to="/" className="hover:text-cyan-600">Home</Link>
                 <ChevronRight className="h-4 w-4" />
                 <span className="text-slate-700">AI</span>
               </div>
 
-              <div className="inline-flex items-center gap-2 mb-4">
-                <div className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)] animate-pulse"></div>
-                <div className="text-cyan-600 font-bold text-xs tracking-[0.2em] uppercase">Premium Course</div>
+              <div className="flex items-center gap-2 mb-4 text-cyan-600 text-sm font-medium">
+                <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
+                Course
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+              <h1 className="text-4xl md:text-5xl text-slate-900 font-bold mb-6">
                 {p.title}
               </h1>
 
               {/* Badges/Stats */}
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-4 text-[15px] text-slate-600 mb-8 font-medium">
-                <div className="flex items-center gap-2 border border-slate-200 px-3 py-1 rounded-full text-sm bg-white shadow-sm text-slate-700">
+              <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600 mb-8">
+                <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>
                   <span>{p.level.split(' ')[0]} Level</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-                  <span className="font-bold text-slate-800">4.8</span>
-                  <span className="text-slate-500 font-normal ml-1 border-b border-slate-300 border-dashed cursor-help">13,375 reviews</span>
+                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  <span className="text-slate-800">4.8</span>
+                  <span className="text-slate-500">(13,375 reviews)</span>
                 </div>
-                <div className="text-slate-500 text-sm">
-                  Last updated: <span className="font-semibold text-slate-700">05/2025</span>
+                <div className="text-slate-500">
+                  Last updated: 05/2025
                 </div>
               </div>
 
-              <p className="text-lg md:text-[19px] text-slate-600 leading-relaxed mb-10 max-w-2xl">
+              <p className="text-lg text-slate-600 mb-10 max-w-2xl">
                 Explore what AI is and how to use it responsibly for smarter, more productive work!
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 mb-10">
-                <Link to="/contact" className="inline-flex items-center justify-center bg-cyan-500 hover:bg-cyan-600 shadow-lg shadow-cyan-500/25 text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-cyan-500/40 text-[16px]">
+              <div className="mb-10">
+                <Link to="/contact" className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-[16px]">
                   Start Course for Free
                 </Link>
-                <div className="text-sm font-medium text-slate-500 px-4">
-                  No credit card required.
-                </div>
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2.5">
-                <span className="px-3.5 py-2 bg-white border border-slate-200/60 text-slate-600 text-xs font-bold rounded-lg shadow-sm">Theory</span>
-                <span className="px-3.5 py-2 bg-white border border-slate-200/60 text-slate-600 text-xs font-bold rounded-lg shadow-sm">Artificial Intelligence</span>
-                <span className="flex items-center gap-2 px-3.5 py-2 bg-white border border-slate-200/60 text-slate-600 text-xs font-bold rounded-lg shadow-sm"><Clock className="h-3.5 w-3.5 text-cyan-500" /> {p.duration}</span>
-                <span className="flex items-center gap-2 px-3.5 py-2 bg-white border border-slate-200/60 text-slate-600 text-xs font-bold rounded-lg shadow-sm"><Award className="h-3.5 w-3.5 text-cyan-500" /> 2,100 XP</span>
-                <span className="flex items-center gap-2 px-3.5 py-2 bg-white border border-slate-200/60 text-slate-600 text-xs font-bold rounded-lg shadow-sm"><Award className="h-3.5 w-3.5 text-cyan-500" /> Certificate</span>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm">Theory</span>
+                <span className="px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm">Artificial Intelligence</span>
+                <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm"><Clock className="h-4 w-4 text-slate-400" /> {p.duration}</span>
+                <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm"><Award className="h-4 w-4 text-slate-400" /> 2,100 XP</span>
+                <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm"><Award className="h-4 w-4 text-slate-400" /> Certificate</span>
               </div>
             </div>
 
@@ -158,8 +155,8 @@ function ProgramPage() {
               {/* Create Account Banner */}
               <div className="mt-8 flex flex-col items-center gap-4 w-full bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white shadow-xl ring-1 ring-slate-900/5">
                 <div className="text-center">
-                  <h3 className="font-extrabold text-slate-900 text-lg mb-1">Create Your Free Account</h3>
-                  <p className="text-xs text-slate-500 font-medium">Join 12,000+ learners worldwide</p>
+                  <h2 className="font-extrabold text-slate-900 text-lg mb-1">Create Your Free Account</h2>
+
                 </div>
                 <button className="w-full bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all text-[15px] shadow-sm hover:shadow group">
                   <svg className="h-5 w-5 bg-white rounded-full p-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" /><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" /><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" /><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" /></svg>
