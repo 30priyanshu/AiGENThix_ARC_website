@@ -72,7 +72,7 @@ function ProgramPage() {
   return (
     <SiteLayout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-slate-200 bg-[radial-gradient(circle_at_top_left,#a5f3fc_0%,#ecfeff_20%,#f8fafc_55%,#ffffff_100%)] pt-20 pb-24">
+      <section className="relative overflow-hidden -mt-24 border-b border-slate-200 bg-[radial-gradient(circle_at_top_left,#a5f3fc_0%,#ecfeff_20%,#f8fafc_55%,#ffffff_100%)] pt-41 pb-26">
         {/* grid backdrop */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
