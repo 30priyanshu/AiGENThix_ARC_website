@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Search, Users } from "lucide-react";
+import { ArrowRight, Search, Users, Star, Briefcase, TrendingUp } from "lucide-react";
 
 // Use the requested hero images instead of program images
 import hero1Img from "@/assets/hero-1.jpg";
@@ -51,7 +51,7 @@ export function Hero() {
   const slide = CARD_SLIDES[card];
 
   return (
-    <section className="relative overflow-hidden -mt-24 pt-38 pb-28 lg:pb-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 text-slate-900">
+    <section className="relative overflow-hidden -mt-24 pt-38 pb-28 lg:pb-24 bg-gradient-to-br from-cyan-100 via-white to-cyan-100 text-slate-900">
       {/* grid backdrop */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.4]"
@@ -142,20 +142,70 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-5">
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
-                <Users className="h-4 w-4 text-cyan-600" />
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+                  <Users className="h-4 w-4 text-cyan-600" />
+                </div>
+
+                <div>
+                  <p className="font-sans text-xs text-slate-500">
+                    Learners
+                  </p>
+
+                  <p className="font-sans text-sm font-semibold text-slate-900">
+                    12,000+
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <p className="font-sans text-xs text-slate-500">
-                  Trusted by
-                </p>
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+                  <Star className="h-4 w-4 text-cyan-600" />
+                </div>
 
-                <p className="font-sans text-sm font-semibold text-slate-900">
-                  12,000+ Learners Worldwide
-                </p>
+                <div>
+                  <p className="font-sans text-xs text-slate-500">
+                    Rating
+                  </p>
+
+                  <p className="font-sans text-sm font-semibold text-slate-900">
+                    4.9/5
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+                  <Briefcase className="h-4 w-4 text-cyan-600" />
+                </div>
+
+                <div>
+                  <p className="font-sans text-xs text-slate-500">
+                    Partners
+                  </p>
+
+                  <p className="font-sans text-sm font-semibold text-slate-900">
+                    140+
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+                  <TrendingUp className="h-4 w-4 text-cyan-600" />
+                </div>
+
+                <div>
+                  <p className="font-sans text-xs text-slate-500">
+                    Career Growth
+                  </p>
+
+                  <p className="font-sans text-sm font-semibold text-slate-900">
+                    92%
+                  </p>
+                </div>
               </div>
 
             </div>
@@ -164,7 +214,7 @@ export function Hero() {
 
           {/* RIGHT COLUMN - Premium Image Slider */}
           <div className="relative flex justify-center lg:justify-end w-full">
-            <div className="relative w-full max-w-[520px] rounded-[28px] overflow-hidden shadow-2xl bg-black">
+            <div className="relative w-full max-w-[500px] rounded-[20px] overflow-hidden shadow-2xl bg-black">
 
               <div className="relative aspect-square">
 

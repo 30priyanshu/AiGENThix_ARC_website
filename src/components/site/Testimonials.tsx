@@ -16,15 +16,8 @@ const items = [
     quote:
       "I champion innovation-led education, guiding faculty and students in cutting-edge areas such as Generative AI, Agentic AI, NLP, and Computer Vision while fostering industry-academia collaboration.",
     name: "Dr. Salur Srikant Patnaik",
-    role: "Dean & AI Research Scientist",
+    role: "CEO and Founder",
     img: avatar2,
-  },
-  {
-    quote:
-      "Build AI that's ethical, explainable, and sustainable. We create AI solutions across finance, healthcare, and education that deliver impact without compromising on transparency.",
-    name: "Parth Saarthi",
-    role: "Machine Learning Engineer & Founder",
-    img: avatar3,
   },
 ];
 
@@ -58,7 +51,7 @@ export function Testimonials() {
         </div>
 
         {/* Cards */}
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
 
           {items.map((t, i) => (
             <motion.figure

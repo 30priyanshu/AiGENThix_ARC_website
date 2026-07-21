@@ -43,7 +43,7 @@ export function WhyUs() {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyan-50 via-white to-cyan-50" />
+      <div className="absolute inset-0 bg-white" />
 
       <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-cyan-200/30 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-cyan-100/40 rounded-full blur-3xl" />
@@ -56,7 +56,7 @@ export function WhyUs() {
 
           <h2 className="mt-5 text-3xl font-bold text-slate-900 md:text-4xl">
             Why Professionals Choose
-            <span className="text-cyan-600"> AiGENThix</span>
+            <span className="block text-cyan-600"> AiGENThix Research Centre</span>
           </h2>
 
 
@@ -88,7 +88,7 @@ export function WhyUs() {
                   className="h-40 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent" />
               </div>
 
               {/* Content */}

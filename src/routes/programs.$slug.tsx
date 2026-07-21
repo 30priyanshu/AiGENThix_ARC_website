@@ -56,6 +56,7 @@ function ProgramPage() {
 
   // Accordion state
   const [openChapter, setOpenChapter] = useState<number | null>(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const curriculum = [
     { phase: "01", time: "Weeks 1–4", title: "Foundations", body: "Core concepts, tooling, and environment setup." },
@@ -128,16 +129,16 @@ function ProgramPage() {
 
               <div className="mb-10">
                 <Link to="/contact" className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-[16px]">
-                  Start Course for Free
+                  Start Course
                 </Link>
               </div>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-3">
                 <span className="px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm">Theory</span>
+                <span className="px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm">Virtual Classroom</span>
                 <span className="px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm">Artificial Intelligence</span>
                 <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm"><Clock className="h-4 w-4 text-slate-400" /> {p.duration}</span>
-                <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm"><Award className="h-4 w-4 text-slate-400" /> 2,100 XP</span>
                 <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-slate-200 text-slate-600 text-sm rounded-md shadow-sm"><Award className="h-4 w-4 text-slate-400" /> Certificate</span>
               </div>
             </div>
@@ -155,7 +156,7 @@ function ProgramPage() {
               {/* Create Account Banner */}
               <div className="mt-8 flex flex-col items-center gap-4 w-full bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white shadow-xl ring-1 ring-slate-900/5">
                 <div className="text-center">
-                  <h2 className="font-extrabold text-slate-900 text-lg mb-1">Create Your Free Account</h2>
+                  <h2 className="font-extrabold text-slate-900 text-lg mb-1">Enroll Now to Start Your Learning Journey</h2>
 
                 </div>
                 <button className="w-full bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all text-[15px] shadow-sm hover:shadow group">
@@ -262,7 +263,7 @@ function ProgramPage() {
                                 Hide Details <ChevronUp className="h-4 w-4" />
                               </button>
                               <Link to="/contact" className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2.5 px-6 rounded transition-colors shadow-sm text-[15px]">
-                                Start Course for Free
+                                Start Course
                               </Link>
                             </div>
                           </div>
@@ -347,7 +348,7 @@ function ProgramPage() {
                   <Star className="h-4 w-4" /> What is AI Tutor?
                 </h4>
                 <p className="text-gray-600 text-[13px] text-center leading-relaxed mb-4">
-                  DataCamp's AI tutor personalizes every lesson in real time — adapting to your role, level, and goals. You'll learn faster and smarter in courses taught by the world's #1 AI tutor for AI and data.
+                  Agenthix Research Centre's AI tutor personalizes every lesson in real time — adapting to your role, level, and goals. You'll learn faster and smarter in courses taught by the world's #1 AI tutor for AI and data.
                 </p>
                 <div className="text-center">
                   <a href="#" className="text-[#0556f3] font-bold text-[15px] hover:underline">Learn More</a>
@@ -363,10 +364,10 @@ function ProgramPage() {
                   <Users className="h-5 w-5 text-gray-500" /> Training 2 or more people?
                 </h4>
                 <p className="text-gray-600 text-[13px] mb-5 leading-relaxed pr-6">
-                  Get your team access to the full DataCamp platform, including all the features.
+                  Get your team access to the full Agenthix Research Centre platform, including all the features.
                 </p>
                 <Link to="/business" className="block w-full text-center border-2 border-gray-900 text-gray-900 font-bold py-2.5 rounded hover:bg-gray-50 transition-colors mb-4 text-[15px]">
-                  DataCamp for Business
+                  for Business
                 </Link>
                 <p className="text-[13px] text-gray-500 text-center">
                   For a bespoke solution <a href="#" className="text-[#0556f3] hover:underline font-bold">book a demo.</a>
@@ -402,7 +403,7 @@ function ProgramPage() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="mb-8">
                   <h4 className="text-[14px] font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <Building2 className="h-4 w-4 text-cyan-600" /> Delivered by
+                    <Building2 className="h-4 w-4 text-cyan-600" /> Learn from AI Experts
                   </h4>
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
@@ -421,7 +422,7 @@ function ProgramPage() {
                       </div>
                       <div>
                         <div className="font-bold text-gray-900 text-[16px]">Dr. Salur Srikant Patnaik</div>
-                        <div className="text-[13px] text-gray-500 mt-0.5">Dean & AI Research Scientist</div>
+                        <div className="text-[13px] text-gray-500 mt-0.5">CEO and Founder</div>
                       </div>
                     </div>
                   </div>
@@ -433,8 +434,49 @@ function ProgramPage() {
         </div>
       </section>
 
+      {/* Course FAQ Section */}
+      {p.faqs && p.faqs.length > 0 && (
+        <section className="bg-white py-20 border-t border-gray-200">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                Frequently Asked <span className="text-cyan-600">Questions</span>
+              </h2>
+              <p className="mt-4 text-base text-slate-600">
+                Everything you need to know about the {p.title} program.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {p.faqs.map((faq, i) => {
+                const isOpen = openFaq === i;
+                return (
+                  <div key={i} className="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-sm transition-all duration-200">
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                      className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors text-left"
+                    >
+                      <h3 className="text-[17px] font-bold text-gray-900 pr-4">{faq.question}</h3>
+                      {isOpen ? (
+                        <ChevronUp className="h-5 w-5 text-cyan-600 shrink-0" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-gray-400 shrink-0" />
+                      )}
+                    </button>
+                    {isOpen && (
+                      <div className="px-6 pb-6 text-gray-600 text-[15px] leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Forms Section */}
-      <section className="py-24 bg-white border-t border-gray-200">
+      <section className="py-24 bg-slate-50 border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Feedback Form */}

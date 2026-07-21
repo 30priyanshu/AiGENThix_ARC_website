@@ -41,14 +41,14 @@ const steps = [
 
 export function Roadmap() {
   return (
-    <section className="relative py-24 bg-slate-50 overflow-hidden">
+    <section className="relative py-16 bg-slate-50 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 left-0 h-80 w-80 rounded-full bg-cyan-100 blur-[120px]" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-50 blur-[150px]" />
+      <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-cyan-100 blur-[100px]" />
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-cyan-50 blur-[120px]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-cyan-600 text-sm font-medium">
             Learning Roadmap
           </p>
@@ -57,32 +57,30 @@ export function Roadmap() {
             Become an AI Engineer
           </h2>
 
-          <p className="mt-4 text-sm text-slate-600">
+          <p className="mt-3 text-sm text-slate-600">
             A structured learning path from fundamentals to production-ready AI.
           </p>
         </div>
 
         <div className="relative">
-          {/* Center Zig Zag Path */}
-          <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-[260px] h-full pointer-events-none">
-
-            <div className="hidden lg:block absolute left-1/2 top-[95px] -translate-x-1/2 h-[1140px] w-[300px] pointer-events-none">
-
+          {/* Desktop Zig-Zag Path */}
+          <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-[240px] h-full pointer-events-none">
+            <div className="absolute left-1/2 top-[65px] -translate-x-1/2 h-[780px] w-[280px]">
               <svg
                 className="w-full h-full"
-                viewBox="0 0 300 1140"
+                viewBox="0 0 280 780"
                 fill="none"
               >
                 <path
                   d="
-      M150 20
-      C150 90,270 90,270 190
-      C270 290,30 290,30 390
-      C30 490,270 490,270 590
-      C270 690,30 690,30 790
-      C30 890,270 890,270 990
-      C270 1070,150 1070,150 1120
-      "
+                    M140 20
+                    C140 70,250 70,250 130
+                    C250 190,30 190,30 250
+                    C30 310,250 310,250 370
+                    C250 430,30 430,30 490
+                    C30 550,250 550,250 610
+                    C250 670,140 670,140 740
+                  "
                   stroke="#06B6D4"
                   strokeWidth="3"
                   strokeDasharray="10 10"
@@ -90,56 +88,53 @@ export function Roadmap() {
                   strokeLinecap="round"
                 />
 
-                <circle cx="150" cy="20" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
-                <circle cx="270" cy="190" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
-                <circle cx="30" cy="390" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
-                <circle cx="270" cy="590" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
-                <circle cx="30" cy="790" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
-                <circle cx="270" cy="990" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
-                <circle cx="150" cy="1120" r="8" fill="#06B6D4" stroke="white" strokeWidth="4" />
+                <circle cx="140" cy="20" r="7" fill="#06B6D4" />
+                <circle cx="250" cy="130" r="7" fill="#06B6D4" />
+                <circle cx="30" cy="250" r="7" fill="#06B6D4" />
+                <circle cx="250" cy="370" r="7" fill="#06B6D4" />
+                <circle cx="30" cy="490" r="7" fill="#06B6D4" />
+                <circle cx="250" cy="610" r="7" fill="#06B6D4" />
+                <circle cx="140" cy="740" r="7" fill="#06B6D4" />
               </svg>
-
             </div>
-
           </div>
 
+          {/* Steps */}
           <div className="space-y-0">
             {steps.map((step, index) => (
               <motion.div
                 key={step.phase}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
+                  duration: 0.4,
+                  delay: index * 0.08,
                 }}
                 className={`
-        relative flex items-center
-        h-[190px]
-        ${index % 2 === 0 ? "justify-start" : "justify-end"}
-      `}
+                  relative flex items-center
+                  h-[130px]
+                  ${index % 2 === 0 ? "justify-start" : "justify-end"}
+                `}
               >
-                {/* Card */}
-                <div className="w-full lg:w-[430px] rounded-[28px] bg-white border border-cyan-100 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-
+                <div className="w-full lg:w-[380px] rounded-2xl bg-white border border-cyan-100 p-4 shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="flex gap-3 items-start">
-                    <span className="text-[34px] font-bold text-cyan-500 leading-none">
+                    <span className="text-2xl font-bold text-cyan-500 leading-none">
                       {step.phase}
                     </span>
 
                     <div>
-                      <h3 className="text-[28px] font-bold text-slate-900 leading-tight">
+                      <h3 className="text-xl font-bold text-slate-900">
                         {step.title}
                       </h3>
 
-                      <p className="text-sm font-medium text-cyan-600 mt-1">
+                      <p className="text-xs font-medium text-cyan-600 mt-1">
                         {step.duration}
                       </p>
                     </div>
                   </div>
 
-                  <p className="mt-5 text-[15px] leading-8 text-slate-600">
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
                     {step.body}
                   </p>
                 </div>
