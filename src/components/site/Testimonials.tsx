@@ -7,17 +7,17 @@ import avatar3 from "@/assets/parth sir.png";
 const items = [
   {
     quote:
-      "A highly accomplished Chief AI Scientist with over 18 years of experience spanning AI, Gen AI, Machine Learning. Leading AI innovation, research, and corporate training globally.",
-    name: "Dr. Arpit Yadav",
-    role: "CEO & Co-Founder, Chief AI Scientist",
-    img: avatar1,
-  },
-  {
-    quote:
       "I champion innovation-led education, guiding faculty and students in cutting-edge areas such as Generative AI, Agentic AI, NLP, and Computer Vision while fostering industry-academia collaboration.",
     name: "Dr. Salur Srikant Patnaik",
     role: "CEO and Founder",
     img: avatar2,
+  },
+  {
+    quote:
+      "A highly accomplished Chief AI Scientist with over 18 years of experience spanning AI, Gen AI, Machine Learning. Leading AI innovation, research, and corporate training globally.",
+    name: "Dr. Arpit Yadav",
+    role: "Co-Founder, Chief AI Scientist",
+    img: avatar1,
   },
 ];
 

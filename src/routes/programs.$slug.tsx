@@ -408,21 +408,21 @@ function ProgramPage() {
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
                       <div className="h-14 w-14 rounded-full bg-cyan-100 p-0.5 overflow-hidden shrink-0 border border-cyan-200">
-                        <img src={avatar1} alt="Dr. Arpit Yadav" className="w-full h-full object-cover rounded-full" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-gray-900 text-[16px]">Dr. Arpit Yadav</div>
-                        <div className="text-[13px] text-gray-500 mt-0.5">CEO & Co-Founder, Chief AI Scientist</div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                      <div className="h-14 w-14 rounded-full bg-cyan-100 p-0.5 overflow-hidden shrink-0 border border-cyan-200">
                         <img src={avatar2} alt="Dr. Salur Srikant Patnaik" className="w-full h-full object-cover rounded-full" />
                       </div>
                       <div>
                         <div className="font-bold text-gray-900 text-[16px]">Dr. Salur Srikant Patnaik</div>
                         <div className="text-[13px] text-gray-500 mt-0.5">CEO and Founder</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className="h-14 w-14 rounded-full bg-cyan-100 p-0.5 overflow-hidden shrink-0 border border-cyan-200">
+                        <img src={avatar1} alt="Dr. Arpit Yadav" className="w-full h-full object-cover rounded-full" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900 text-[16px]">Dr. Arpit Yadav</div>
+                        <div className="text-[13px] text-gray-500 mt-0.5">Co-Founder, Chief AI Scientist</div>
                       </div>
                     </div>
                   </div>
