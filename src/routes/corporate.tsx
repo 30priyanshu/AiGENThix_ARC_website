@@ -27,11 +27,11 @@ function Corporate() {
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Enterprise</div>
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600">Enterprise</div>
             <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-navy">
               AI transformation,
               <br />
-              <span className="text-navy/60">delivered end-to-end.</span>
+              <span className="text-cyan-500">delivered end-to-end.</span>
             </h1>
             <p className="mt-6 text-[17px] text-navy/80 max-w-2xl mx-auto leading-relaxed">
               We partner with enterprise teams from onboarding to executive AI

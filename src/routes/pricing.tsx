@@ -27,11 +27,11 @@ function Pricing() {
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Pricing</div>
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600">Pricing</div>
             <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-navy">
               Investment tiers,
               <br />
-              <span className="text-navy/60">designed for outcomes.</span>
+              <span className="text-cyan-500">designed for outcomes.</span>
             </h1>
           </div>
         </div>

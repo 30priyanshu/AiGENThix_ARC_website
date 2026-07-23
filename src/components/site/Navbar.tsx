@@ -41,7 +41,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div
           className={`flex items-center justify-between rounded-full px-4 sm:px-6 py-3 transition-all duration-500 ${scrolled
-              ? "bg-white/95 backdrop-blur-md shadow-md border border-gray-100"
+              ? "bg-white/95 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100"
               : "bg-transparent"
             }`}
         >

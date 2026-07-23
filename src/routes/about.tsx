@@ -21,14 +21,14 @@ function About() {
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-4xl mx-auto text-center">
 
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600">
               Our Story
             </div>
 
             <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-slate-900">
               We build the practitioners
               <br />
-              <span className="text-navy/60">the AI era demands.</span>
+              <span className="text-cyan-500">the AI era demands.</span>
             </h1>
             <p className="mt-8 text-[17px] text-slate-700 leading-relaxed">
               AiGENThix was founded on a simple conviction: traditional education

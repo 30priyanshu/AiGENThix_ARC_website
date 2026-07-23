@@ -142,67 +142,70 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-5">
+            <div className="mt-8 grid grid-cols-2 gap-3">
 
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+              {/* Learners Card */}
+              <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100 flex items-center gap-3 hover:shadow-md transition-shadow">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-50">
                   <Users className="h-4 w-4 text-cyan-600" />
                 </div>
-
                 <div>
-                  <p className="font-sans text-xs text-slate-500">
+                  <p className="font-sans text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     Learners
                   </p>
-
-                  <p className="font-sans text-sm font-semibold text-slate-900">
+                  <p className="font-sans text-[15px] font-bold text-slate-900 mt-px">
                     12,000+
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
-                  <Star className="h-4 w-4 text-cyan-600" />
+              {/* Rating Card */}
+              <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100 flex items-center gap-3 hover:shadow-md transition-shadow">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-50">
+                  <Star className="h-4 w-4 text-cyan-500 fill-cyan-500" />
                 </div>
-
                 <div>
-                  <p className="font-sans text-xs text-slate-500">
+                  <p className="font-sans text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     Rating
                   </p>
-
-                  <p className="font-sans text-sm font-semibold text-slate-900">
-                    4.9/5
-                  </p>
+                  <div className="flex items-center gap-1.5 mt-px">
+                    <p className="font-sans text-[15px] font-bold text-slate-900">
+                      4.9/5
+                    </p>
+                    <div className="flex -space-x-0.5">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="h-3 w-3 text-amber-500 fill-amber-500" />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+              {/* Partners Card */}
+              <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100 flex items-center gap-3 hover:shadow-md transition-shadow">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-50">
                   <Briefcase className="h-4 w-4 text-cyan-600" />
                 </div>
-
                 <div>
-                  <p className="font-sans text-xs text-slate-500">
+                  <p className="font-sans text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     Partners
                   </p>
-
-                  <p className="font-sans text-sm font-semibold text-slate-900">
+                  <p className="font-sans text-[15px] font-bold text-slate-900 mt-px">
                     140+
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-50">
+              {/* Career Growth Card */}
+              <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-100 flex items-center gap-3 hover:shadow-md transition-shadow">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-50">
                   <TrendingUp className="h-4 w-4 text-cyan-600" />
                 </div>
-
                 <div>
-                  <p className="font-sans text-xs text-slate-500">
+                  <p className="font-sans text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                     Career Growth
                   </p>
-
-                  <p className="font-sans text-sm font-semibold text-slate-900">
+                  <p className="font-sans text-[15px] font-bold text-slate-900 mt-px">
                     92%
                   </p>
                 </div>

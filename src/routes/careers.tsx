@@ -21,11 +21,11 @@ function Careers() {
       <section className="py-20 bg-gradient-to-b from-indigo-50/50 to-transparent">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Careers</div>
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600">Careers</div>
             <h1 className="mt-3">
               Build the organization
               <br />
-              <span className="text-navy/60">that trains the AI era.</span>
+              <span className="text-cyan-500">that trains the AI era.</span>
             </h1>
           </div>
           <div className="mt-16 divide-y divide-hairline border-y border-hairline">
